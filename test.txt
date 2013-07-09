@@ -1,0 +1,64 @@
+HOME
+- Search
+- post button not aligned
+- Post and replies: on focus should delete text, color should change to #242424, the input should increase the width (and height?) on focus.
+- "item last" missing on some examples
+- friends scroll
+- Friends search
+- User color should be the same as filename
+- Last examples has the avatar sticked to the upper border of the item
+- inline Post button is in bold, should be normal
+- bold on upload button?
+- rollover on filters (and also in search)
+- buttons rollover not on grey.
+
+YOUR MEDIA
+- Left menu: Color on labels?
+- Rollover
+- All media icon on rollover (should be transparent)
+- Inner menu shouldnt have opacity.
+- onClick filename animation missing
+- Should have new pagination
+- When you click on play button the item should expand to show the player
+- Search friends agregar preloader al fondo del input 
+- tooltip
+
+FRIENDS
+- Button should not be bold
+- button needs more right and left padding
+- 
+
+SEARCH
+- Missing icon on tab
+- rollover on filters
+- redo ajax loader
+
+Explicar en el wave paso a paso los post y replies del feed.
+
+MEEBO DISPLAY:hidden
+
+THUMBNAILS 
+
+- MP3 and documents thumbnail missing.
+- Star icons
+- 
+
+AVATAR
+- Feed: 38x38
+- Friend list in sidebar:38x38
+- profile in sidebar: 84x84
+- profile on top of media: 63x63
+- on tab: 17x17
+
+FILE:
+- video thumbnail: 94x69
+- Video screenshot inside player: 425x233
+- Image thumbnail : 94x69
+- Image max width: 425
+
+
+- si no tenemos tiempo simplifiquemos, despues agregamo
+- a manuel no le gusta algo del feed
+- cuando clicko en friends que salte automaticamente, y si es necesario poner un loader.
+- add the background.
+- for the demo poner todos los avatars
