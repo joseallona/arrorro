@@ -228,7 +228,6 @@ swfobject.embedSWF(swfUrl, swfId, width, height, version, xi, flashvars, params,
 			<ul id="mainMenu">
 			<li<? echo $classHome ?>><a href="./" title="home">home</a></li>
 				<li<? echo $classArrorro ?>><a href="proyecto.php" title="arrorr&oacute;">arrorr&oacute;</a></li>
-				<li><a href="/blog" title="blog">blog</a></li>
 				<li<? echo $classCanciones ?>><a href="canciones.php" title="lullabies">lullabies</a></li>
 				<div class="clearBoth"></div>
 			</ul>
