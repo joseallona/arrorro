@@ -5,6 +5,7 @@
 if (!empty($_FILES)) {
 	$newName =$_GET['videoId'];
 	$tempFile = $_FILES['Filedata']['tmp_name'];
+	mail('jallona@gmail.com','test',$tempFile);
 	$rootPath = substr($_SERVER['SCRIPT_FILENAME'],0, strrpos($_SERVER['SCRIPT_FILENAME'],$_SERVER['SCRIPT_NAME'])). '/';
 	$targetPath = $rootPath . $_GET['folder'] . '/';
 
