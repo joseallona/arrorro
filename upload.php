@@ -12,7 +12,7 @@ if (!empty($_FILES)) {
 	$targetFile =  str_replace('//','/',$targetPath) . $newName.'.'.$ext;
 	
 	// Uncomment the following line if you want to make the directory if it doesn't exist
-	//mkdir(str_replace('//','/',$targetPath), 0755, true);	
+	mkdir(str_replace('//','/',$targetPath), 0755, true);	
 	move_uploaded_file($tempFile,$targetFile);
 	
 	
@@ -74,7 +74,7 @@ if (!empty($_FILES)) {
 	
 	$video  = $targetPath.'mariela1.mov';
 	
-	$image  = $rootPath . $_GET['folder'] . '/mariela_thumb.jpg';
+	$image  = $rootPath . $_GET['folder'] . 'mariela_thumb.jpg';
 
 	$second = 1;
 	
