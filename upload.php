@@ -16,7 +16,7 @@ if (!empty($_FILES)) {
 	move_uploaded_file($tempFile,$targetFile);
 	
 	
-	$ffmpeg = '/usr/bin/ffmpeg';
+	$ffmpeg = 'ffmpeg';
 	
 	$video  = $targetPath.$newName.'.'.$ext;
 	
