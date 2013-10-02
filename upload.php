@@ -16,7 +16,7 @@ if (!empty($_FILES)) {
 	move_uploaded_file($tempFile,$targetFile);
 	
 	
-	$ffmpeg = '/usr/local/bin/ffmpeg';
+	$ffmpeg = '/usr/bin/ffmpeg';
 	
 	$video  = $targetPath.$newName.'.'.$ext;
 	
@@ -33,7 +33,7 @@ if (!empty($_FILES)) {
 	$cmd = "$ffmpeg -i $video -deinterlace -an -ss $second -t 00:00:01 -r 1 -y -s 320x240 -vcodec mjpeg -f mjpeg $image 2>&1";
 	$return = `$cmd`;
 	
-	echo $video;
+	//echo $video;
 
 }else{
 	//$newName ='jenny';
@@ -46,13 +46,13 @@ if (!empty($_FILES)) {
 	// Uncomment the following line if you want to make the directory if it doesn't exist
 	//mkdir(str_replace('//','/',$targetPath), 0755, true);	
 	//move_uploaded_file($tempFile,$targetFile);
-	//echo "<pre>";
-	//print_r($_SERVER);
-	//echo "</pre>";
-	//echo "<pre>";
-	//$rootPath = substr($_SERVER['SCRIPT_FILENAME'],0, strrpos($_SERVER['SCRIPT_FILENAME'],$_SERVER['SCRIPT_NAME'])). '/';
-	//echo $rootPath;
-	//echo "</pre>";
+	echo "<pre>";
+	print_r($_SERVER);
+	echo "</pre>";
+	echo "<pre>";
+	$rootPath = substr($_SERVER['SCRIPT_FILENAME'],0, strrpos($_SERVER['SCRIPT_FILENAME'],$_SERVER['SCRIPT_NAME'])). '/';
+	echo $rootPath;
+	echo "</pre>";
 
 
 	$newName =$_GET['videoId'];
@@ -88,7 +88,7 @@ if (!empty($_FILES)) {
 	//$cmd = "ffmpeg -i foo.avi -r 1 -s WxH -f image2 foo-%03d.jpeg";
 	$return = `$cmd`;
 	
-	//echo $video;
+	echo $video;
 
 
 
