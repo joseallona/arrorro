@@ -6,7 +6,7 @@ if (!empty($_FILES)) {
 	$newName =$_GET['videoId'];
 	$tempFile = $_FILES['Filedata']['tmp_name'];
 	$rootPath = substr($_SERVER['SCRIPT_FILENAME'],0, strrpos($_SERVER['SCRIPT_FILENAME'],$_SERVER['SCRIPT_NAME'])). '/';
-	$targetPath = $rootPath . $_GET['folder'];
+	$targetPath = $rootPath . $_GET['folder'] . '/';
 
 	$ext = substr($_FILES['Filedata']['name'], strrpos($_FILES['Filedata']['name'], '.') + 1);
 	$targetFile =  str_replace('//','/',$targetPath) . $newName.'.'.$ext;
