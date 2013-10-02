@@ -5,7 +5,6 @@
 if (!empty($_FILES)) {
 	$newName =$_GET['videoId'];
 	$tempFile = $_FILES['Filedata']['tmp_name'];
-	mail('jallona@gmail.com','test',$tempFile);
 	$rootPath = substr($_SERVER['SCRIPT_FILENAME'],0, strrpos($_SERVER['SCRIPT_FILENAME'],$_SERVER['SCRIPT_NAME'])). '/';
 	$targetPath = $rootPath . $_GET['folder'] . '/';
 
@@ -13,13 +12,14 @@ if (!empty($_FILES)) {
 	$targetFile =  str_replace('//','/',$targetPath) . $newName.'.'.$ext;
 	
 	// Uncomment the following line if you want to make the directory if it doesn't exist
-	mkdir(str_replace('//','/',$targetPath), 0755, true);	
+	//mkdir(str_replace('//','/',$targetPath), 0755, true);	
 	move_uploaded_file($tempFile,$targetFile);
 	
 	
 	$ffmpeg = '/usr/bin/ffmpeg';
 	
 	$video  = $targetPath.$newName.'.'.$ext;
+	mail('jallona@gmail.com','test',$video);
 	
 	$image  = $rootPath . '_thumbs/'.$newName.'.jpg';
 
