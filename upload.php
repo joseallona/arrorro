@@ -70,7 +70,7 @@ if (!empty($_FILES)) {
 	//move_uploaded_file($tempFile,$targetFile);
 	
 	
-	$ffmpeg = '/usr/local/bin/ffmpeg';
+	$ffmpeg = '/usr/bin/ffmpeg';
 	
 	$video  = $targetPath.'mariela1.mov';
 	
