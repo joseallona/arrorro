@@ -24,15 +24,14 @@ if (!empty($_FILES)) {
 
 	$second = 1;
 	
-	$cmd = "$ffmpeg -i $video 2>&1";
+	$cmd = "$ffmpeg -i $video 2>&1";	
 	if (preg_match('/Duration: ((\d+):(\d+):(\d+))/s', `$cmd`, $time)) {
 		$total = ($time[2] * 3600) + ($time[3] * 60) + $time[4];
 		$second = rand(1, ($total - 1));
 	}
 	$cmd = "$ffmpeg -i $video -deinterlace -an -ss $second -t 00:00:01 -r 1 -y -s 320x240 -vcodec mjpeg -f mjpeg $image 2>&1";
 	mail('jallona@gmail.com','test', $cmd);
-
-	$return = `$cmd`;
+	shell_exec($cmd);
 	
 	//echo $video;
 
